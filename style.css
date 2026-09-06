@@ -13,7 +13,9 @@ body {
 }
 
 
-/* ================= NAVBAR ================= */
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 .navbar {
     height: 70px;
@@ -51,6 +53,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
+
     transition: 0.3s;
 }
 
@@ -63,7 +66,9 @@ nav a:hover {
 }
 
 
-/* ================= HERO ================= */
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
     min-height: 90vh;
@@ -114,11 +119,13 @@ nav a:hover {
 
 .hero h1 span {
     display: block;
+
     color: #e5b84b;
 }
 
 .hero p {
     font-size: 18px;
+
     color: #f5e8d4;
 }
 
@@ -130,6 +137,7 @@ nav a:hover {
     padding: 14px 25px;
 
     background: #e5b84b;
+
     color: #24140d;
 
     text-decoration: none;
@@ -143,44 +151,61 @@ nav a:hover {
 
 .button:hover {
     background: #f3ca62;
+
     transform: translateY(-2px);
 }
 
 
-/* ================= HERO PHOTO ================= */
+/* =====================================================
+   HERO PHOTO
+   FULL IMAGE - NO CROP
+===================================================== */
 
 .hero-photo {
-    width: 420px;
-    height: 500px;
+    width: 520px;
+
+    max-width: 48%;
+
+    height: auto;
 
     border: 3px solid #e5b84b;
 
-    overflow: hidden;
-
     border-radius: 20px;
+
+    overflow: hidden;
 
     flex-shrink: 0;
 
     background: #fffaf2;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
 .hero-photo img {
     width: 100%;
-    height: 100%;
+
+    height: auto;
 
     display: block;
 
     object-fit: contain;
 
-    background: #fffaf2;
+    object-position: center;
+
+    border-radius: 16px;
 }
 
 
-/* ================= GENERAL SECTIONS ================= */
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
 
 .section {
     max-width: 1250px;
@@ -207,7 +232,9 @@ h2 span {
 }
 
 
-/* ================= ABOUT ================= */
+/* =====================================================
+   ABOUT
+===================================================== */
 
 .about {
     display: grid;
@@ -232,7 +259,10 @@ h2 span {
 }
 
 
-/* ================= ABOUT PHOTO FIX ================= */
+/* =====================================================
+   ABOUT PHOTO
+   FULL IMAGE - NO CROP
+===================================================== */
 
 .about-photo {
     width: 100%;
@@ -269,7 +299,9 @@ h2 span {
 }
 
 
-/* ================= PRODUCTS ================= */
+/* =====================================================
+   PRODUCTS
+===================================================== */
 
 .products {
     background: #17100d;
@@ -341,7 +373,9 @@ h2 span {
 }
 
 
-/* ================= GALLERY ================= */
+/* =====================================================
+   GALLERY
+===================================================== */
 
 .gallery {
     display: grid;
@@ -371,7 +405,9 @@ h2 span {
 }
 
 
-/* ================= PROJECT ================= */
+/* =====================================================
+   PROJECT
+===================================================== */
 
 .project {
     background: #eee2d0;
@@ -391,6 +427,7 @@ h2 span {
 
 .initial {
     width: 75px;
+
     height: 75px;
 
     border-radius: 50%;
@@ -438,7 +475,9 @@ h2 span {
 
     border-radius: 10px;
 
-    border: 1px solid rgba(100, 60, 30, 0.1);
+    border:
+        1px solid
+        rgba(100, 60, 30, 0.1);
 }
 
 .details small {
@@ -458,7 +497,9 @@ h2 span {
 }
 
 
-/* ================= FOOTER ================= */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
     background: #120c09;
@@ -487,7 +528,9 @@ footer p {
 }
 
 
-/* ================= TABLET ================= */
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 1000px) {
 
@@ -496,8 +539,9 @@ footer p {
     }
 
     .hero-photo {
-        width: 360px;
-        height: 430px;
+        width: 440px;
+
+        max-width: 45%;
     }
 
     .cards {
@@ -512,7 +556,9 @@ footer p {
 }
 
 
-/* ================= MOBILE ================= */
+/* =====================================================
+   MOBILE / TABLET
+===================================================== */
 
 @media (max-width: 850px) {
 
@@ -559,7 +605,7 @@ footer p {
     }
 
 
-    /* HERO MOBILE */
+    /* HERO */
 
     .hero {
         flex-direction: column;
@@ -576,17 +622,21 @@ footer p {
     }
 
     .hero h1 {
-        font-size: clamp(55px, 15vw, 90px);
+        font-size:
+            clamp(55px, 15vw, 90px);
     }
+
+
+    /* HERO PHOTO */
 
     .hero-photo {
         width: 100%;
 
-        max-width: 500px;
+        max-width: 600px;
 
         height: auto;
 
-        min-height: 0;
+        margin: 0 auto;
 
         border-radius: 18px;
     }
@@ -600,7 +650,7 @@ footer p {
     }
 
 
-    /* ABOUT MOBILE */
+    /* ABOUT */
 
     .about {
         grid-template-columns: 1fr;
@@ -609,9 +659,11 @@ footer p {
     }
 
     .about-photo {
+        width: 100%;
+
         max-width: 600px;
 
-        width: 100%;
+        margin: 0 auto;
     }
 
     .about-photo img {
@@ -648,7 +700,9 @@ footer p {
 }
 
 
-/* ================= SMALL MOBILE ================= */
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
 
 @media (max-width: 550px) {
 
@@ -664,6 +718,8 @@ footer p {
         min-height: auto;
 
         padding: 60px 6%;
+
+        gap: 35px;
     }
 
     .hero h1 {
@@ -687,12 +743,15 @@ footer p {
     }
 
 
-    /* SINGLE COLUMN */
+    /* ONE COLUMN */
 
     .cards,
     .gallery {
         grid-template-columns: 1fr;
     }
+
+
+    /* PRODUCT IMAGE */
 
     .card img {
         height: auto;
@@ -704,6 +763,9 @@ footer p {
         background: #281c16;
     }
 
+
+    /* GALLERY IMAGE */
+
     .gallery img {
         height: auto;
 
@@ -713,7 +775,7 @@ footer p {
     }
 
 
-    /* ABOUT IMAGE */
+    /* ABOUT PHOTO */
 
     .about-photo {
         width: 100%;
