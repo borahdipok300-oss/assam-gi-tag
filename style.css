@@ -13,7 +13,7 @@ body {
 }
 
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 
 .navbar {
     height: 70px;
@@ -60,7 +60,7 @@ nav a:hover {
 }
 
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero {
     min-height: 90vh;
@@ -70,6 +70,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 50px;
 
     background:
@@ -97,8 +98,11 @@ nav a:hover {
 
 .hero h1 {
     font-family: Georgia, serif;
+
     font-size: clamp(60px, 10vw, 130px);
+
     line-height: .9;
+
     margin-bottom: 30px;
 }
 
@@ -126,14 +130,22 @@ nav a:hover {
     font-weight: bold;
 
     border-radius: 5px;
+
+    transition: .3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
 }
 
 
-/* HERO PHOTO */
+/* ================= HERO PHOTO ================= */
 
 .hero-photo {
     width: 420px;
-    height: 500px;
+
+    /* Height is flexible so the complete magazine photo can be shown */
+    min-height: 500px;
 
     border: 3px solid #e5b84b;
 
@@ -142,17 +154,27 @@ nav a:hover {
     border-radius: 20px;
 
     flex-shrink: 0;
+
+    background: #fffaf2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-photo img {
     width: 100%;
-    height: 100%;
+    height: auto;
 
-    object-fit: cover;
+    max-height: 650px;
+
+    object-fit: contain;
+
+    display: block;
 }
 
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 .section {
     max-width: 1250px;
@@ -178,7 +200,7 @@ h2 span {
 }
 
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 
 .about {
     display: grid;
@@ -216,7 +238,7 @@ h2 span {
 }
 
 
-/* PRODUCTS */
+/* ================= PRODUCTS ================= */
 
 .products {
     background: #17100d;
@@ -282,7 +304,7 @@ h2 span {
 }
 
 
-/* GALLERY */
+/* ================= GALLERY ================= */
 
 .gallery {
     display: grid;
@@ -309,7 +331,7 @@ h2 span {
 }
 
 
-/* PROJECT */
+/* ================= PROJECT ================= */
 
 .project {
     background: #eee2d0;
@@ -380,7 +402,7 @@ h2 span {
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer {
     background: #120c09;
@@ -403,7 +425,7 @@ footer h3 span {
 }
 
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media (max-width: 850px) {
 
@@ -450,10 +472,28 @@ footer h3 span {
         padding: 70px 6%;
     }
 
+    .hero-content {
+        max-width: 700px;
+    }
+
     .hero-photo {
         width: 100%;
         max-width: 420px;
-        height: 400px;
+
+        min-height: 0;
+
+        height: auto;
+
+        padding: 8px;
+    }
+
+    .hero-photo img {
+        width: 100%;
+        height: auto;
+
+        max-height: none;
+
+        object-fit: contain;
     }
 
     .about {
@@ -476,10 +516,32 @@ footer h3 span {
 }
 
 
+/* ================= SMALL MOBILE ================= */
+
 @media (max-width: 550px) {
+
+    .hero {
+        padding: 55px 6%;
+    }
 
     .hero h1 {
         font-size: 55px;
+    }
+
+    .hero-photo {
+        width: 100%;
+        max-width: 360px;
+
+        padding: 6px;
+
+        border-radius: 16px;
+    }
+
+    .hero-photo img {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
     }
 
     .cards,
