@@ -1108,3 +1108,64 @@ footer small {
     }
 
 }
+/* ================= SARALABALA DEVI SECTION ================= */
+
+.saralabala-section {
+    background: #eee2d0;
+    position: relative;
+}
+
+.saralabala-content {
+    max-width: 950px;
+    margin: 45px auto 0;
+    padding: 45px;
+    background: #fffaf2;
+    border: 1px solid #e5b84b;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.saralabala-content::before {
+    content: "❖  ✦  ❖";
+    display: block;
+    text-align: center;
+    color: #e5b84b;
+    font-size: 22px;
+    letter-spacing: 10px;
+    margin-bottom: 25px;
+}
+
+.saralabala-content p {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 25px;
+    text-align: justify;
+    color: #30231d;
+}
+
+.saralabala-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .saralabala-content {
+        padding: 28px 20px;
+    }
+
+    .saralabala-content p {
+        font-size: 16px;
+        line-height: 1.9;
+        text-align: left;
+    }
+
+    .saralabala-content::before {
+        font-size: 18px;
+        letter-spacing: 6px;
+    }
+
+}
