@@ -1,12 +1,12 @@
 /* =========================================================
    CHOMANGKAN — DIGITAL COLLEGE MAGAZINE
-   FULL STYLE.CSS
+   ORIGINAL STYLE
 ========================================================= */
 
 
-/* =========================================================
-   1. BASIC RESET
-========================================================= */
+/* -------------------------
+   BASIC RESET
+------------------------- */
 
 * {
     margin: 0;
@@ -28,6 +28,7 @@ body {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 a {
@@ -35,67 +36,39 @@ a {
     color: inherit;
 }
 
-button {
-    font-family: inherit;
-}
 
-
-/* =========================================================
-   2. COLOR VARIABLES
-========================================================= */
+/* -------------------------
+   VARIABLES
+------------------------- */
 
 :root {
     --dark: #17100d;
-    --dark-brown: #2b1b16;
-    --brown: #4a3025;
+    --brown: #2b1b16;
+    --brown-light: #4a3025;
+
     --gold: #e5b84b;
     --gold-dark: #b87912;
+
     --cream: #fffaf2;
     --cream-dark: #f2e6d4;
-    --border: #dfc79e;
+
     --text: #30231d;
     --muted: #665951;
+
+    --border: #dfc79e;
     --white: #ffffff;
 }
 
 
 /* =========================================================
-   3. COMMON SECTION
-========================================================= */
-
-.section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 105px 40px;
-}
-
-.section h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(42px, 5vw, 72px);
-    line-height: 1.1;
-    color: #34231c;
-    margin-bottom: 55px;
-}
-
-.section h2 span {
-    color: var(--gold-dark);
-}
-
-.section-title {
-    margin-bottom: 50px;
-}
-
-
-/* =========================================================
-   4. NAVBAR
+   NAVBAR
 ========================================================= */
 
 .navbar {
-    width: 100%;
     height: 72px;
+    width: 100%;
 
-    background: var(--dark);
+    background: #17100d;
 
     display: flex;
     align-items: center;
@@ -105,39 +78,52 @@ button {
 
     position: sticky;
     top: 0;
+
     z-index: 1000;
 
-    border-bottom: 1px solid rgba(229, 184, 75, 0.18);
+    border-bottom: 1px solid rgba(229, 184, 75, 0.15);
 }
 
 .logo {
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 25px;
     font-weight: bold;
-    color: var(--gold);
+
+    color: #e5b84b;
+
     white-space: nowrap;
 }
 
 .logo span {
-    color: var(--gold);
+    color: #e5b84b;
 }
+
+
+/* Navigation */
 
 #navMenu {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
 }
 
 #navMenu a {
     color: #ffffff;
+
     font-size: 15px;
+
     transition: color 0.3s ease;
+
     white-space: nowrap;
 }
 
 #navMenu a:hover {
-    color: var(--gold);
+    color: #e5b84b;
 }
+
+
+/* Mobile menu button */
 
 #menuBtn {
     display: none;
@@ -145,7 +131,8 @@ button {
     background: transparent;
     border: none;
 
-    color: var(--gold);
+    color: #e5b84b;
+
     font-size: 28px;
 
     cursor: pointer;
@@ -153,7 +140,37 @@ button {
 
 
 /* =========================================================
-   5. HERO SECTION
+   COMMON SECTION
+========================================================= */
+
+.section {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 105px 40px;
+}
+
+.section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 5vw, 72px);
+
+    line-height: 1.1;
+
+    color: #34231c;
+
+    margin-bottom: 55px;
+}
+
+.section h2 span {
+    color: #b87912;
+}
+
+
+/* =========================================================
+   HERO
 ========================================================= */
 
 .hero {
@@ -163,36 +180,44 @@ button {
         linear-gradient(
             90deg,
             #1c100c 0%,
-            #24140e 48%,
+            #24140e 50%,
             #321d13 100%
         );
 
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     align-items: center;
 
-    gap: 70px;
+    gap: 65px;
 
     padding: 80px 7%;
 
-    color: white;
+    color: #ffffff;
 }
 
 .hero-content {
     max-width: 620px;
 }
 
+
+/* Small heading */
+
 .hero .small-title {
-    color: var(--gold);
+    color: #e5b84b;
 
     font-size: 13px;
+
     font-weight: bold;
 
     letter-spacing: 5px;
 
     margin-bottom: 22px;
 }
+
+
+/* Main title */
 
 .hero h1 {
     font-family: Georgia, "Times New Roman", serif;
@@ -201,19 +226,22 @@ button {
 
     line-height: 0.95;
 
-    margin-bottom: 32px;
-
     color: #ffffff;
+
+    margin-bottom: 32px;
 }
 
 .hero h1 span {
-    color: var(--gold);
+    color: #e5b84b;
 }
+
+
+/* Hero paragraph */
 
 .hero p {
     max-width: 560px;
 
-    font-size: 19px;
+    font-size: 18px;
 
     line-height: 1.9;
 
@@ -225,68 +253,65 @@ button {
 
 /* Hero button */
 
-.hero .btn,
-.btn {
+.hero .btn {
     display: inline-block;
 
     padding: 16px 28px;
 
-    background: var(--gold);
+    background: #e5b84b;
 
     color: #17100d;
 
-    font-size: 16px;
-    font-weight: bold;
+    border: 1px solid #e5b84b;
 
     border-radius: 4px;
 
-    border: 1px solid var(--gold);
+    font-size: 16px;
 
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
 }
 
-.hero .btn:hover,
-.btn:hover {
+.hero .btn:hover {
     background: transparent;
-    color: var(--gold);
+
+    color: #e5b84b;
 
     transform: translateY(-3px);
 }
 
 
 /* =========================================================
-   6. HERO PHOTO FRAME
+   HERO PHOTO
 ========================================================= */
 
 .hero-photo {
     width: 100%;
-    max-width: 590px;
+    max-width: 580px;
 
     margin-left: auto;
 
     padding: 15px;
 
-    background: rgba(65, 39, 27, 0.75);
+    background: #2b1b16;
 
     border: 1px solid #8f6a2c;
 
     border-radius: 18px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     box-shadow:
-        0 20px 55px rgba(0, 0, 0, 0.25);
+        0 18px 45px rgba(0, 0, 0, 0.20);
 }
 
 .hero-photo img {
-    display: block;
-
     width: 100%;
+
     height: auto;
 
     aspect-ratio: 16 / 9;
@@ -298,11 +323,11 @@ button {
 
 
 /* =========================================================
-   7. ABOUT SECTION
+   ABOUT
 ========================================================= */
 
 #about {
-    background: var(--cream);
+    background: #fffaf2;
 }
 
 .about {
@@ -312,7 +337,7 @@ button {
 
     align-items: center;
 
-    gap: 75px;
+    gap: 70px;
 }
 
 .about h2 {
@@ -320,23 +345,23 @@ button {
 }
 
 .about p {
+    max-width: 600px;
+
     font-size: 17px;
 
     line-height: 2;
 
-    color: var(--text);
+    color: #30231d;
 
     margin-bottom: 25px;
-
-    max-width: 600px;
 }
 
 
-/* About image */
+/* About image frame */
 
 .about-photo {
     width: 100%;
-    max-width: 540px;
+    max-width: 520px;
 
     margin-left: auto;
 
@@ -347,29 +372,26 @@ button {
     border-radius: 18px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
-
-    box-shadow:
-        0 15px 35px rgba(55, 35, 20, 0.08);
 }
 
 .about-photo img {
-    display: block;
-
     width: 100%;
+
     height: auto;
 
     aspect-ratio: 16 / 9;
 
     object-fit: cover;
 
-    border-radius: 9px;
+    border-radius: 8px;
 }
 
 
 /* =========================================================
-   8. GI PRODUCTS SECTION
+   GI PRODUCTS
 ========================================================= */
 
 #products {
@@ -377,46 +399,34 @@ button {
 }
 
 
-/* Product section heading */
-
-#products .section h2 {
-    margin-bottom: 10px;
-}
-
-
-/* Product cards grid */
+/* Product cards */
 
 .cards {
     display: grid;
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    column-gap: 42px;
-    row-gap: 48px;
+    gap: 38px;
 
-    margin-top: 50px;
+    margin-top: 55px;
 
     align-items: start;
 }
 
 
-/* =========================================================
-   9. INDIVIDUAL GI PRODUCT CARD
-========================================================= */
+/* Product card */
 
 .card {
-    width: 100%;
-
     background: #ffffff;
 
-    border: 1px solid #e5d2b5;
+    border: 1px solid #ead8b8;
 
     border-radius: 18px;
 
     overflow: hidden;
 
     box-shadow:
-        0 8px 28px rgba(58, 38, 25, 0.08);
+        0 8px 25px rgba(55, 35, 20, 0.08);
 
     transition:
         transform 0.3s ease,
@@ -424,21 +434,19 @@ button {
 }
 
 .card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 
     box-shadow:
-        0 18px 40px rgba(58, 38, 25, 0.14);
+        0 15px 32px rgba(55, 35, 20, 0.13);
 }
 
 
 /* Product image */
 
 .card img {
-    display: block;
-
     width: 100%;
 
-    height: 285px;
+    height: 270px;
 
     object-fit: cover;
 
@@ -446,16 +454,16 @@ button {
 }
 
 
-/* Product content */
+/* Card content */
 
 .card-content {
-    padding: 28px 30px 32px;
+    padding: 27px 29px 30px;
 }
 
 .card h3 {
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 27px;
+    font-size: 25px;
 
     line-height: 1.3;
 
@@ -467,33 +475,30 @@ button {
 .card p {
     font-size: 16px;
 
-    line-height: 1.85;
+    line-height: 1.8;
 
     color: #5c514b;
 }
 
 
 /* =========================================================
-   10. PRODUCT DESCRIPTION / LONG ARTICLES
+   LONG PRODUCT DESCRIPTION
 ========================================================= */
 
 .product-description {
-    max-height: 330px;
+    max-height: 420px;
 
     overflow-y: auto;
 
-    margin-top: 17px;
+    padding-right: 10px;
 
-    padding-top: 18px;
-    padding-right: 14px;
-
-    border-top: 1px solid #e8ddcd;
+    margin-top: 5px;
 }
 
 .product-description p {
     margin-bottom: 18px;
 
-    line-height: 1.85;
+    line-height: 1.8;
 }
 
 
@@ -510,18 +515,14 @@ button {
 }
 
 .product-description::-webkit-scrollbar-thumb {
-    background: #c69232;
+    background: #e5b84b;
 
     border-radius: 10px;
 }
 
-.product-description::-webkit-scrollbar-thumb:hover {
-    background: #a8751e;
-}
-
 
 /* =========================================================
-   11. EDITORIAL SECTION
+   EDITORIAL
 ========================================================= */
 
 .editorial-section {
@@ -532,8 +533,6 @@ button {
     max-width: 950px;
 
     margin: 0 auto;
-
-    padding: 20px 0;
 }
 
 .editorial-content p {
@@ -550,13 +549,11 @@ button {
 
 
 /* =========================================================
-   12. NATURE SECTION
+   NATURE
 ========================================================= */
 
 .nature-section {
-    background: #eee6d9;
-
-    position: relative;
+    background: #f2e8da;
 }
 
 .nature-content {
@@ -579,7 +576,7 @@ button {
 
 
 /* =========================================================
-   13. CULTURE SECTION
+   CULTURE
 ========================================================= */
 
 .culture-section {
@@ -606,7 +603,7 @@ button {
 
 
 /* =========================================================
-   14. SARALABALA DEVI SECTION
+   SARALABALA DEVI
 ========================================================= */
 
 .saralabala-section {
@@ -633,7 +630,7 @@ button {
 
 
 /* =========================================================
-   15. GALLERY
+   GALLERY
 ========================================================= */
 
 #gallery {
@@ -645,38 +642,35 @@ button {
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 22px;
+    gap: 20px;
 }
 
 .gallery img {
-    display: block;
-
     width: 100%;
-    height: 280px;
+
+    height: 270px;
 
     object-fit: cover;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
-    border: 1px solid #e0ceb0;
-
-    background: #f1e6d8;
+    border: 1px solid #dfc79e;
 
     transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .gallery img:hover {
-    transform: scale(1.025);
+    transform: scale(1.02);
 
     box-shadow:
-        0 12px 28px rgba(55, 35, 20, 0.15);
+        0 12px 25px rgba(55, 35, 20, 0.12);
 }
 
 
 /* =========================================================
-   16. PROJECT SECTION
+   PROJECT
 ========================================================= */
 
 .project {
@@ -700,11 +694,11 @@ button {
 }
 
 .project h2 span {
-    color: var(--gold);
+    color: #e5b84b;
 }
 
 
-/* Student / creator box */
+/* Student information */
 
 .student {
     max-width: 900px;
@@ -715,47 +709,55 @@ button {
 
     align-items: center;
 
-    gap: 30px;
+    gap: 28px;
 
-    padding: 35px;
-
-    border: 1px solid rgba(229, 184, 75, 0.35);
-
-    border-radius: 18px;
+    padding: 32px;
 
     background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(229, 184, 75, 0.3);
+
+    border-radius: 16px;
 }
 
-.initial {
-    width: 75px;
-    height: 75px;
 
-    flex: 0 0 75px;
+/* Initial circle */
+
+.initial {
+    width: 72px;
+    height: 72px;
+
+    flex: 0 0 72px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    border-radius: 50%;
-
-    background: var(--gold);
+    background: #e5b84b;
 
     color: #21130e;
 
+    border-radius: 50%;
+
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 30px;
+    font-size: 29px;
+
     font-weight: bold;
 }
 
+
+/* Project details */
+
 .details h3 {
-    color: var(--gold);
+    color: #e5b84b;
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 27px;
+    font-size: 26px;
 
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .details p {
@@ -763,14 +765,12 @@ button {
 
     font-size: 16px;
 
-    line-height: 1.9;
-
-    margin-bottom: 5px;
+    line-height: 1.8;
 }
 
 
 /* =========================================================
-   17. FOOTER
+   FOOTER
 ========================================================= */
 
 footer {
@@ -784,7 +784,7 @@ footer {
 }
 
 footer h3 {
-    color: var(--gold);
+    color: #e5b84b;
 
     font-family: Georgia, "Times New Roman", serif;
 
@@ -808,34 +808,23 @@ footer .creator {
 }
 
 footer .creator span {
-    color: var(--gold);
+    color: #e5b84b;
 }
 
 
 /* =========================================================
-   18. SELECTION
+   TEXT SELECTION
 ========================================================= */
 
 ::selection {
-    background: var(--gold);
+    background: #e5b84b;
+
     color: #17100d;
 }
 
 
 /* =========================================================
-   19. FOCUS
-========================================================= */
-
-a:focus-visible,
-button:focus-visible {
-    outline: 2px solid var(--gold);
-
-    outline-offset: 4px;
-}
-
-
-/* =========================================================
-   20. TABLET — 900px
+   TABLET
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -853,7 +842,7 @@ button:focus-visible {
     }
 
     .hero {
-        gap: 40px;
+        gap: 45px;
 
         padding-left: 5%;
         padding-right: 5%;
@@ -863,11 +852,6 @@ button:focus-visible {
         gap: 45px;
     }
 
-    .cards {
-        column-gap: 28px;
-        row-gap: 35px;
-    }
-
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -875,7 +859,7 @@ button:focus-visible {
 
 
 /* =========================================================
-   21. MOBILE NAVIGATION
+   MOBILE NAVIGATION
 ========================================================= */
 
 @media (max-width: 850px) {
@@ -883,7 +867,7 @@ button:focus-visible {
     .navbar {
         height: 68px;
 
-        position: sticky;
+        padding: 0 5%;
     }
 
     #menuBtn {
@@ -894,6 +878,7 @@ button:focus-visible {
         position: absolute;
 
         top: 68px;
+
         left: 0;
         right: 0;
 
@@ -907,12 +892,9 @@ button:focus-visible {
 
         gap: 0;
 
-        padding: 12px 0;
+        padding: 10px 0;
 
-        border-top: 1px solid rgba(229, 184, 75, 0.2);
-
-        box-shadow:
-            0 15px 25px rgba(0, 0, 0, 0.25);
+        border-top: 1px solid rgba(229, 184, 75, 0.15);
     }
 
     #navMenu.active {
@@ -927,10 +909,6 @@ button:focus-visible {
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    #navMenu a:hover {
-        background: #261812;
-    }
-
 
     /* Hero */
 
@@ -939,14 +917,9 @@ button:focus-visible {
 
         grid-template-columns: 1fr;
 
-        padding-top: 75px;
-        padding-bottom: 75px;
+        padding: 75px 7%;
 
-        gap: 55px;
-    }
-
-    .hero-content {
-        max-width: 700px;
+        gap: 50px;
     }
 
     .hero-photo {
@@ -971,12 +944,12 @@ button:focus-visible {
     }
 
 
-    /* Products */
+    /* GI products */
 
     .cards {
         grid-template-columns: 1fr;
 
-        gap: 35px;
+        gap: 32px;
     }
 
     .card {
@@ -995,7 +968,7 @@ button:focus-visible {
 
 
 /* =========================================================
-   22. SMALL MOBILE — 600px
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -1031,11 +1004,9 @@ button:focus-visible {
     }
 
     .hero h1 {
-        font-size: 62px;
+        font-size: 60px;
 
         line-height: 0.95;
-
-        margin-bottom: 25px;
     }
 
     .hero p {
@@ -1085,7 +1056,7 @@ button:focus-visible {
     .cards {
         gap: 28px;
 
-        margin-top: 35px;
+        margin-top: 40px;
     }
 
     .card {
@@ -1093,11 +1064,11 @@ button:focus-visible {
     }
 
     .card img {
-        height: 235px;
+        height: 230px;
     }
 
     .card-content {
-        padding: 23px 21px 25px;
+        padding: 22px;
     }
 
     .card h3 {
@@ -1111,22 +1082,19 @@ button:focus-visible {
     }
 
     .product-description {
-        max-height: 360px;
+        max-height: 420px;
 
-        padding-right: 11px;
-    }
-
-    .product-description p {
-        line-height: 1.8;
+        padding-right: 9px;
     }
 
 
-    /* Editorial / Nature / Culture */
+    /* Text sections */
 
     .editorial-content p,
     .nature-content p,
     .culture-content p,
     .saralabala-content p {
+
         font-size: 16px;
 
         line-height: 1.9;
@@ -1144,9 +1112,7 @@ button:focus-visible {
     }
 
     .gallery img {
-        height: 245px;
-
-        border-radius: 10px;
+        height: 240px;
     }
 
 
@@ -1193,17 +1159,13 @@ button:focus-visible {
 
 
 /* =========================================================
-   23. VERY SMALL PHONE — 400px
+   VERY SMALL SCREEN
 ========================================================= */
 
 @media (max-width: 400px) {
 
     .hero h1 {
         font-size: 52px;
-    }
-
-    .hero .small-title {
-        letter-spacing: 2px;
     }
 
     .section h2 {
