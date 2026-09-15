@@ -982,3 +982,23 @@ footer small {
     }
 
 }
+.product-description {
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.product-description p {
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+
+/* Scrollbar */
+.product-description::-webkit-scrollbar {
+    width: 5px;
+}
+
+.product-description::-webkit-scrollbar-thumb {
+    background: #e5b84b;
+    border-radius: 10px;
+}
