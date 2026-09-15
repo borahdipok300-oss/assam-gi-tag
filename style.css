@@ -1044,3 +1044,67 @@ footer small {
     }
 
 }
+/* ================= CULTURAL HERITAGE SECTION ================= */
+
+.culture-section {
+    background: #17100d;
+    color: #fffaf2;
+    position: relative;
+}
+
+.culture-content {
+    max-width: 950px;
+    margin: 45px auto 0;
+    padding: 45px;
+    border: 1px solid #e5b84b;
+    border-top: 6px solid #e5b84b;
+    border-radius: 14px;
+    background: #211612;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.culture-content p {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.culture-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Traditional decorative effect */
+
+.culture-content::before {
+    content: "❖  ✦  ❖";
+    display: block;
+    text-align: center;
+    color: #e5b84b;
+    font-size: 22px;
+    letter-spacing: 10px;
+    margin-bottom: 25px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .culture-content {
+        padding: 28px 20px;
+        border-top-width: 5px;
+    }
+
+    .culture-content p {
+        font-size: 16px;
+        line-height: 1.9;
+        text-align: left;
+    }
+
+    .culture-content::before {
+        font-size: 18px;
+        letter-spacing: 6px;
+    }
+
+}
