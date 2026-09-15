@@ -925,3 +925,60 @@ footer small {
     }
 
 }
+/* ================= WOMEN IN SOCIETY ================= */
+
+.women-section {
+    background: #eee2d0;
+    color: #30231d;
+}
+
+.women-section .section {
+    max-width: 1100px;
+}
+
+.women-content {
+    max-width: 950px;
+    margin: 45px auto 0;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.women-content p {
+    margin-bottom: 25px;
+}
+
+.women-highlight {
+    margin: 40px 0;
+    padding: 30px 35px;
+    border-left: 5px solid #e5b84b;
+    background: #fffaf2;
+    border-radius: 0 15px 15px 0;
+}
+
+.women-highlight p {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.7;
+    font-weight: 600;
+    color: #5b3b18;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .women-content {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .women-highlight {
+        padding: 22px 25px;
+    }
+
+    .women-highlight p {
+        font-size: 19px;
+    }
+
+}
