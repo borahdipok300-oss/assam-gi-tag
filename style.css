@@ -1002,3 +1002,45 @@ footer small {
     background: #e5b84b;
     border-radius: 10px;
 }
+/* ================= NATURE SECTION ================= */
+
+.nature-section {
+    background: #fffaf2;
+}
+
+.nature-content {
+    max-width: 950px;
+    margin: 45px auto 0;
+    padding: 45px;
+    background: #eee2d0;
+    border-left: 5px solid #e5b84b;
+    border-radius: 12px;
+}
+
+.nature-content p {
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.nature-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .nature-content {
+        padding: 25px 20px;
+    }
+
+    .nature-content p {
+        font-size: 16px;
+        line-height: 1.9;
+        text-align: left;
+    }
+
+}
