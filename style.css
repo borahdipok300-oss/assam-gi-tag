@@ -868,3 +868,60 @@ footer small {
     }
 
 }
+/* ================= GOLDEN THREAD SECTION ================= */
+
+.golden-thread {
+    background: #fffaf2;
+    color: #30231d;
+}
+
+.golden-thread .section {
+    max-width: 1100px;
+}
+
+.golden-content {
+    max-width: 950px;
+    margin: 45px auto 0;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.golden-content p {
+    margin-bottom: 25px;
+}
+
+.golden-highlight {
+    margin: 40px 0;
+    padding: 30px 35px;
+    border-left: 5px solid #e5b84b;
+    background: #eee2d0;
+    border-radius: 0 15px 15px 0;
+}
+
+.golden-highlight p {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.7;
+    font-weight: 600;
+    color: #5b3b18;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .golden-content {
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .golden-highlight {
+        padding: 22px 25px;
+    }
+
+    .golden-highlight p {
+        font-size: 19px;
+    }
+
+}
