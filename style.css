@@ -1546,3 +1546,11 @@ footer small {
         height: 280px;
     }
 }
+/* Culture Section Heading Fix */
+.culture-section h2 {
+    color: #ffffff !important;
+}
+
+.culture-section h2 span {
+    color: #e5b84b !important;
+}
