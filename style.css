@@ -1554,3 +1554,64 @@ footer small {
 .culture-section h2 span {
     color: #e5b84b !important;
 }
+/* =========================
+   MAHOT LOKOR BANI
+   ========================= */
+
+.mohot-bani-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.quote-card {
+    position: relative;
+    padding: 30px;
+    background: #21140f;
+    border: 1px solid #584235;
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-5px);
+    border-color: #e5b84b;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.quote-number {
+    display: block;
+    color: #e5b84b;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.quote-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.quote-card strong {
+    color: #e5b84b;
+    font-size: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .mohot-bani-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .quote-card {
+        padding: 24px;
+    }
+
+    .quote-card p {
+        font-size: 16px;
+    }
+
+}
