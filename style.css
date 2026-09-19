@@ -1642,3 +1642,21 @@ footer small {
     }
 
 }
+/* Fix quote text visibility */
+
+.quote-card p {
+    color: #fff8ed !important;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 500;
+    margin: 0 0 22px 0;
+}
+
+.quote-card strong {
+    color: #e5b84b !important;
+}
+
+.quote-number {
+    color: #17100d !important;
+    background: #e5b84b;
+}
